@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  header
+    h1.text-center Disciples II units stats
+  each val in content
+    p
+      a(href='/' + val + '')= val
+  a(href='/add-fraction') +

@@ -1,0 +1,75 @@
+extends layout
+
+mixin unit_rows(profession, unit_path)
+    h3= profession
+    table.table.table-striped
+        thead
+            tr
+                th Name
+                th Level
+                th HP
+                th Armor
+                th Immunities
+                th Wards
+                th Attack
+                th Chance to hit
+                th Damage
+                th Source
+                th Initiative
+                th Reach
+                th Target
+        tbody
+            each unit in unit_path
+                tr
+                    td= unit.label
+                    td= unit.level
+                    td= unit.hp
+                    td= unit.armor
+                    td= unit.immunities
+                    td= unit.ward
+                    td= unit.attack
+                    td= unit.chance_to_hit
+                    td= unit.damage
+                    td= unit.source
+                    td= unit.initiative
+                    td= unit.reach
+                    td= unit.target
+
+
+
+block content
+    div.container
+        div.content
+            h1 Disciples II units stats
+            div.row
+                h2.text-center= stats.title
+            div.row
+                h2 Leaders
+                table.table
+                    thead
+                        tr
+                            th Class
+                            th Name
+                            th Flying?
+                    tbody
+                        tr
+                            td Warrior Lord
+                            td= stats.leaders.warrior_lord.label
+                            td= stats.leaders.warrior_lord.flying
+                        tr
+                            td Mage Lord
+                            td= stats.leaders.mage_lord.label
+                            td= stats.leaders.mage_lord.flying
+                        tr
+                            td Guildmaster
+                            td= stats.leaders.guildmaster.label
+                            td= stats.leaders.guildmaster.flying
+                        tr
+                            td Champion
+                            td= stats.leaders.champion.label
+                            td= stats.leaders.champion.flying
+            div.row
+                h2 Units
+                +unit_rows('Fighters', stats.fighters.unit)
+                +unit_rows('Mages', stats.mages.unit)
+                +unit_rows('Rangers', stats.rangers.unit)

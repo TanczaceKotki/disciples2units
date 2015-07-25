@@ -1,0 +1,28 @@
+<!ELEMENT root (fraction+)>
+    <!ELEMENT fraction (title, leaders, fighters, mages, rangers)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT leaders (warrior_lord, mage_lord, guildmaster, champion)>
+            <!ELEMENT warrior_lord (label, flying)>
+            <!ELEMENT mage_lord (label, flying)>
+            <!ELEMENT guildmaster (label, flying)>
+            <!ELEMENT champion (label, flying)>
+                <!ELEMENT label (#PCDATA)>
+                <!ELEMENT flying (#PCDATA)>
+        <!ELEMENT fighters (unit+)>
+        <!ELEMENT mages (unit+)>
+        <!ELEMENT rangers (unit+)>
+            <!ELEMENT unit (label, level, hp, armor, immunities?, ward?, attack, chance_to_hit, damage, source, initiative, reach, target)>
+            <!ELEMENT level (#PCDATA)>
+            <!ELEMENT hp (#PCDATA)>
+            <!ELEMENT armor (#PCDATA)>
+            <!ELEMENT immunities (#PCDATA)>
+            <!ELEMENT ward (#PCDATA)>
+            <!ELEMENT attack (#PCDATA)>
+            <!ELEMENT chance_to_hit (#PCDATA)>
+            <!ELEMENT damage (#PCDATA)>
+            <!ELEMENT source (#PCDATA)>
+            <!ELEMENT initiative (#PCDATA)>
+            <!ELEMENT reach (#PCDATA)>
+            <!ELEMENT target (#PCDATA)>
+
+<!ENTITY AUTHOR "Katarzyna Bigaj">

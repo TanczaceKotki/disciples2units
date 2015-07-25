@@ -1,0 +1,41 @@
+extends layout
+
+
+block content
+
+   h1 Disciples II units stats
+   h2 Add new fraction
+
+   form(method='post' action='/add' id='form1')
+      p Title:
+      input(type='text' name='title')
+
+      h3 Leaders
+      h4 Warrior lord
+      p Name:
+      input(type='text' name='war-name')
+      p Is Flying?
+      input(type='text' name='war-flying')
+
+      h4 Mage lord
+      p Name:
+      input(type='text' name='mag-name')
+      p Is Flying?
+      input(type='text' name='mag-flying')
+
+      h4 Guildmaster
+      p Name:
+      input(type='text' name='gui-name')
+      p Is Flying?
+      input(type='text' name='gui-flying')
+
+      h4 Champion
+      p Name:
+      input(type='text' name='cha-name')
+      p Is Flying?
+      input(type='text' name='cha-flying')
+
+      input(type='submit' name='submit')
+
+
+
