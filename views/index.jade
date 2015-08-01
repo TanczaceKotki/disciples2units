@@ -1,9 +1,33 @@
 extends layout
 
 block content
-  header
-    h1.text-center Disciples II units stats
-  each val in content
-    p
-      a(href='/' + val + '')= val
-  a(href='/add-fraction') +
+  header.header-image
+    .headline
+      .container
+        h1 Disciples II
+        h2 Fractions - leaders - units - stats
+  // Page Content
+  .bgfix
+    .container
+      .page-header
+        h1
+          | Fractions&nbsp;
+          small Click image to see details
+        //  ------------
+        each f in frac
+          .row
+            .col-lg-6.col-md-6
+              a(href='/' + f.title + '')
+                img.img-responsive(alt='Bootstrap template', src='/images/start/' + f.city_img)
+            .col-lg-6.col-md-6
+              h3= f.title
+              p= f.description
+          hr
+        a(href='/add-fraction') +
+      //  ----------
+      // Footer
+      footer
+        .row
+          .col-lg-12
+            p Copyright &copy; Your Website 2014
+    // /.container

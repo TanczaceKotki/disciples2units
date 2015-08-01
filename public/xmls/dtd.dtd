@@ -1,6 +1,8 @@
 <!ELEMENT root (fraction+)>
-    <!ELEMENT fraction (title, leaders, fighters, mages, rangers)>
+    <!ELEMENT fraction (title, description, city_img, leaders, fighters, mages, rangers)>
         <!ELEMENT title (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT city_img (#PCDATA)>
         <!ELEMENT leaders (warrior_lord, mage_lord, guildmaster, champion)>
             <!ELEMENT warrior_lord (label, flying)>
             <!ELEMENT mage_lord (label, flying)>

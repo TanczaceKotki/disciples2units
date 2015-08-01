@@ -9,7 +9,9 @@ var xmlPath = './public/xmls/xml.xml';
 /* GET home page. */
 router.get('/', function(req, res) {
   var rawJSON = loadXMLDoc( xmlPath );
-  res.render('index', { content: returnFractions(rawJSON) })
+  res.render('index', {
+    frac: fractions(rawJSON)
+  })
 });
 
 router.get('/add-fraction', function(req, res){
@@ -75,10 +77,10 @@ function loadXMLDoc(filePath) {
   } catch (ex) {console.log(ex)}
 }
 
-function returnFractions(rawJSON) {
+function fractions(rawJSON) {
   var fractions = [];
   rawJSON.root.fraction.forEach(function(entry){
-    fractions.push(entry.title);
+    fractions.push(entry);
   });
   return fractions;
 }

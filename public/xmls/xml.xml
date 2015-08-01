@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<!DOCTYPE root SYSTEM "dtd.dtd">-->
+<!DOCTYPE root SYSTEM "dtd.dtd">
 <root>
     <fraction>
         <title>The Empire</title>
+        <description>The Empire consists of units that are very simple and straight forward to use. Fighters in the
+            front row, mages, archers, and healers in the back row. Their fighters are very powerful either offensively
+            and defensively and their healers are flexible to heal all units or one for more effectiveness. Their units
+            tend to have lower Hp than their counterparts. Empire spells are very protective in nature allowing you to
+            ward attacks, heal your units, boost your unit stats, and scout your opponent. They only have a few
+            offensive dammage spells and summoning spells. </description>
+        <city_img>e.jpg</city_img>
         <leaders>
             <warrior_lord>
                 <label>Pegassus Knight</label>
@@ -272,6 +279,14 @@
 
     <fraction>
         <title>The Undead Hordes</title>
+        <description>The Undead Hordes have a very strong army in Disciples 2. They range from powerful fighter units,
+            but the real strength of the Undead Hordes are their mage units. Arch-liches are arguably the strongest
+            direct damage spellcasters, but only downside is that they can't hurt another Undead creature or unit
+            immune to Death attacks. Undead Horde party gets even stronger if presence of Elder Vampires is felt
+            healing entire armies. Shades are also backbone of every Undead army and they can be seen in every battle
+            along with Nosferatus, Liches or Death Knights.
+        </description>
+        <city_img>u.png</city_img>
         <leaders>
             <warrior_lord>
                 <label>Death Knight</label>
@@ -578,6 +593,13 @@
 
     <fraction>
         <title>The Mountain Clans</title>
+        <description>The Warriors of the Mountain Clans posses low initiative and move scores, but to counteract this
+            they have the highest HP pools in the game, in combat they can deal a large amounts of damage, their
+            casters are even dedicated to boost the raw damage of their units. They also have plenty options for none
+            weapon elemental damages Air, Water, Earth and Fire. They are excellent army for playing defensively. The
+            units of the Mountain Clans require a lot of XP to level up. Although this causes them to be slow to level
+            up, the results are well worth it. </description>
+        <city_img>d.jpg</city_img>
         <leaders>
             <warrior_lord>
                 <label>King's Guards</label>
