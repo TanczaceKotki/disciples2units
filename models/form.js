@@ -1,5 +1,3 @@
-module.exports = {
-    addFrac: function() {
+module.exports = function fractionsXML() {
 
-    }
 };

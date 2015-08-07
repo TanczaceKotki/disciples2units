@@ -3,7 +3,8 @@ var router = express.Router();
 var fs = require('fs');
 var xml2js = require('xml2js');
 
-var xmlPath = './public/xmls/xml.xml';
+var xmlPath = './public/xml/xml.xml';
+var fractionList = [];
 
 
 /* GET home page. */
@@ -21,16 +22,13 @@ router.get('/add-fraction', function(req, res){
 // GET fraction units stats
 router.get('/:fraction', function(req, res) {
   var rawJSON = loadXMLDoc( xmlPath );
-  var fracList = returnFractions(rawJSON);
-  console.log(JSON.stringify(rawJSON));
-  var cmp = fracList.indexOf(req.params.fraction);
+  var fract = fracList(rawJSON);
+  var cmp = fract.indexOf(req.params.fraction);
   if (cmp > -1) {
-
     var details = returnFractionDetails(rawJSON, cmp);
-    console.log(JSON.stringify(details.leaders.warrior_lord.lame));
-    res.render('frac', {stats: details});
+    res.render('frac', {frac: fractions(rawJSON), stats: details});
   } else {
-    res.render('frac-404');
+    res.render('frac-404', {frac: fractions(rawJSON)});
   }
 });
 
@@ -41,7 +39,7 @@ router.post('/add', function(req, res) {
   var element = et.Element;
   var subElement = et.SubElement;
   var dataNew, etreeNew;
-  dataNew = fs.readFileSync('./public/xmls/xml.xml').toString();
+  dataNew = fs.readFileSync('./public/xml/xml.xml').toString();
   etreeNew = et.parse(dataNew);
 
   fract = subElement(etreeNew._root, 'fraction');
@@ -71,8 +69,6 @@ function loadXMLDoc(filePath) {
     parser.parseString(fileData.substring(0, fileData.length), function (err, result) {
       json = result;
     });
-
-    console.log("File '" + filePath + "/ was successfully read.\n");
     return json;
   } catch (ex) {console.log(ex)}
 }
@@ -83,6 +79,15 @@ function fractions(rawJSON) {
     fractions.push(entry);
   });
   return fractions;
+}
+
+function fracList(rawJSON) {
+  if (fractionList.length == 0) {
+    rawJSON.root.fraction.forEach(function(entry){
+      fractionList.push(entry.title);
+    });
+  }
+  return fractionList;
 }
 
 function returnFractionDetails(rawJSON, fracIndex) {

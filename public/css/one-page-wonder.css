@@ -12,23 +12,8 @@ body {
     display: block;
     width: 100%;
     text-align: center;
-    background: rgba(0,0,0,0.5);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
-.header-image:after {
-    content: "";
-    background: url('../images/start/bg.jpg') no-repeat center center scroll;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: block;
-    z-index: -1;
+
 }
 
 .headline {
