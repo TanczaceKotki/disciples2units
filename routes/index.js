@@ -1,16 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var f = require('../models/form');
-var rawJSON = f.getXML();
-var fractionList = f.list();
-
+var f = require('../models/fraction');
 
 /* GET home page. */
 router.get('/', function(req, res) {
 
   res.render('index', {
-    frac: rawJSON
+    frac: f.rawJSON
   })
 });
 
@@ -19,12 +16,12 @@ router.get('/add-fraction', function(req, res){
 });
 
 // GET fraction units stats
-router.get('/:fraction', function(req, res) {
-  var cmp = fractionList.indexOf(req.params.fraction);
+router.get('/:frac-title', function(req, res) {
+  var cmp = f.titles.indexOf(req.params.frac-title);
   if (cmp > -1) {
-    res.render('frac', {frac: rawJSON, stats: rawJSON[cmp]});
+    res.render('frac', {frac: f.rawJSON, stats: f.rawJSON[cmp]});
   } else {
-    res.render('frac-404', {frac: rawJSON});
+    res.render('frac-404', {frac: f.rawJSON});
   }
 });
 
