@@ -46,6 +46,21 @@ img.darkableImage {
   transition: all .25s ease-in-out;
 }
 
+.colorful0,  .colorful1, .colorful2{
+  padding: 50px 0;
+  color: #eee;
+}
+
+.colorful0 {
+  background: #674172;
+}
+.colorful1 {
+  background: #1E824C;
+}
+.colorful2 {
+  background: #96281B;
+}
+
 .fracList h3 {
   margin: 10px 0;
 }
@@ -54,8 +69,43 @@ img.darkableImage {
   line-height: 1.35;
 }
 
+.fracList a.btn {
+  padding: 20px 0;
+}
+
+.form-group .col-sm-10 {
+  margin-bottom: 15px;
+}
+.form-group .col-sm-2 {
+  padding-top: 5px;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
 footer {
-  padding-left: 15px;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
 }
 
 @media (max-width: 979px) {

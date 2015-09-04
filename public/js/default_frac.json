@@ -1,0 +1,32 @@
+{
+  "title": req.body.title,
+  'description': req.body.desc,
+  'city_img': req.body.img,
+  'leaders': {
+    'warrior_lord': {
+      'label': '',
+      'flying': 'No'
+    },
+    'mage_lord': {
+      'label': '',
+      'flying': 'No'
+    },
+    'guildmaster': {
+      'label': '',
+      'flying': 'No'
+    },
+    'champion': {
+      'label': '',
+      'flying': 'No'
+    }
+  },
+  'fighters': {
+    'unit': []
+  },
+  'mages': {
+    'unit': []
+  },
+  'rangers': {
+    'unit': []
+  }
+}

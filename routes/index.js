@@ -1,55 +1,36 @@
 var express = require('express');
 var router = express.Router();
+var multer  = require('multer');
 var fs = require('fs');
-var f = require('../models/fraction');
+var fraction = require('../models/fraction');
+var f = new fraction();
+var filename = '';
+
+router.use(multer({ dest: './public/images/start',
+  onFileUploadComplete: function (file) {
+    filename = file.name;
+  }
+}));
 
 /* GET home page. */
 router.get('/', function(req, res) {
-
-  res.render('index', {
-    frac: f.rawJSON
-  })
-});
-
-router.get('/add-fraction', function(req, res){
-  res.render('add-frac');
+  res.render('index', {frac: f.details})
 });
 
 // GET fraction units stats
-router.get('/:frac-title', function(req, res) {
-  var cmp = f.titles.indexOf(req.params.frac-title);
+router.get('/:fracTitle', function(req, res) {
+  var cmp = f.titles.indexOf(req.params.fracTitle);
   if (cmp > -1) {
-    res.render('frac', {frac: f.rawJSON, stats: f.rawJSON[cmp]});
+    res.render('frac', {frac: f.details, stats: f.details[cmp]});
   } else {
-    res.render('frac-404', {frac: f.rawJSON});
+    res.render('frac-404', {frac: f.details});
   }
 });
 
 router.post('/add', function(req, res) {
-  var et = require('elementtree');
-  var XML = et.XML;
-  var ElementTree = et.ElementTree;
-  var element = et.Element;
-  var subElement = et.SubElement;
-  var dataNew, etreeNew;
-  dataNew = fs.readFileSync('./public/xml/xml.xml').toString();
-  etreeNew = et.parse(dataNew);
-
-  fract = subElement(etreeNew._root, 'fraction');
-
-  iframeTitle = subElement(fract, 'title');
-  iframeTitle.text = req.body.title;
-
-  //iframeUrl1 = subElement(fract, 'url1');
-  //iframeUrl1.text = 'a';
-  //
-  //iframeUrl2 = subElement(fract, 'url2');
-  //iframeUrl2.text = 'a';
-
-  etree = new ElementTree(etreeNew._root);
-  xml = etree.write({'xml_declaration': false});
-  //var product = calc.sub(parseInt(req.body.a), parseFloat(req.body.b));
+  f.add(req, filename);
   res.redirect('/');
+  filename = '';
 });
 
 module.exports = router;
