@@ -5,10 +5,11 @@
     <description>The Empire consists of units that are very simple and straight forward to use. Fighters in the
             front row, mages, archers, and healers in the back row. Their fighters are very powerful either offensively
             and defensively and their healers are flexible to heal all units or one for more effectiveness. Their units
-            tend to have lower Hp than their counterparts. Empire spells are very protective in nature allowing you to
-            ward attacks, heal your units, boost your unit stats, and scout your opponent. They only have a few
-            offensive dammage spells and summoning spells. </description>
-    <city_img>e.jpg</city_img>
+            tend to have lower Hp than their counterparts.
+            Empire spells are very protective in nature allowing you to ward attacks, heal your units, boost your unit
+            stats, and scout your opponent. They only have a few offensive dammage spells and summoning spells.
+    </description>
+    <city_img>062c1f1cd36ca984766915d4d881fb36.jpg</city_img>
     <leaders>
       <warrior_lord>
         <label>Pegassus Knight</label>
@@ -282,7 +283,7 @@
             healing entire armies. Shades are also backbone of every Undead army and they can be seen in every battle
             along with Nosferatus, Liches or Death Knights.
         </description>
-    <city_img>u.png</city_img>
+    <city_img>eded.jpg</city_img>
     <leaders>
       <warrior_lord>
         <label>Death Knight</label>
@@ -593,7 +594,7 @@
             weapon elemental damages Air, Water, Earth and Fire. They are excellent army for playing defensively. The
             units of the Mountain Clans require a lot of XP to level up. Although this causes them to be slow to level
             up, the results are well worth it. </description>
-    <city_img>d.jpg</city_img>
+    <city_img>dw.jpg</city_img>
     <leaders>
       <warrior_lord>
         <label>King's Guards</label>
@@ -856,113 +857,9 @@
     </rangers>
   </fraction>
   <fraction>
-    <title>sdfgf</title>
-    <description>rgergg</description>
-    <city_img>default.jpg</city_img>
-    <leaders>
-      <warrior_lord>
-        <label/>
-        <flying/>
-      </warrior_lord>
-      <mage_lord>
-        <label/>
-        <flying/>
-      </mage_lord>
-      <guildmaster>
-        <label/>
-        <flying/>
-      </guildmaster>
-      <champion>
-        <label/>
-        <flying/>
-      </champion>
-    </leaders>
-    <fighters/>
-    <mages/>
-    <rangers/>
-  </fraction>
-  <fraction>
-    <title>scscsc</title>
-    <description>fvdvsvdsv</description>
-    <city_img>img</city_img>
-    <leaders>
-      <warrior_lord>
-        <label/>
-        <flying/>
-      </warrior_lord>
-      <mage_lord>
-        <label/>
-        <flying/>
-      </mage_lord>
-      <guildmaster>
-        <label/>
-        <flying/>
-      </guildmaster>
-      <champion>
-        <label/>
-        <flying/>
-      </champion>
-    </leaders>
-    <fighters/>
-    <mages/>
-    <rangers/>
-  </fraction>
-  <fraction>
-    <title>huviuyvgiu</title>
-    <description>jkbiblib</description>
-    <city_img>default.jpg</city_img>
-    <leaders>
-      <warrior_lord>
-        <label/>
-        <flying/>
-      </warrior_lord>
-      <mage_lord>
-        <label/>
-        <flying/>
-      </mage_lord>
-      <guildmaster>
-        <label/>
-        <flying/>
-      </guildmaster>
-      <champion>
-        <label/>
-        <flying/>
-      </champion>
-    </leaders>
-    <fighters/>
-    <mages/>
-    <rangers/>
-  </fraction>
-  <fraction>
-    <title>dvsdvdv</title>
-    <description>dbvdzsvd</description>
-    <city_img>12c.jpg</city_img>
-    <leaders>
-      <warrior_lord>
-        <label/>
-        <flying/>
-      </warrior_lord>
-      <mage_lord>
-        <label/>
-        <flying/>
-      </mage_lord>
-      <guildmaster>
-        <label/>
-        <flying/>
-      </guildmaster>
-      <champion>
-        <label/>
-        <flying/>
-      </champion>
-    </leaders>
-    <fighters/>
-    <mages/>
-    <rangers/>
-  </fraction>
-  <fraction>
-    <title>jnckdjk</title>
-    <description>dmpvoindpn</description>
-    <city_img>cd5d030f35433ef868af522c9bc79a49.jpg</city_img>
+    <title>Yanosik</title>
+    <description>string language configuration for the plugin to enable the plugin to display messages for your locale (you must set the ISO code for the language). You can have multiple language widgets on the same page. The locale JS file for the language code must be defined as mentioned in the translations section. The file must be loaded after fileinput.js.</description>
+    <city_img>062c1f1cd36ca984766915d4d881fb36.jpg</city_img>
     <leaders>
       <warrior_lord>
         <label/>

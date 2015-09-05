@@ -61,12 +61,12 @@ img.darkableImage {
   background: #96281B;
 }
 
-.fracList h3 {
-  margin: 10px 0;
+.row {
+  margin-right: 0;
 }
 
 .fracList p {
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 .fracList a.btn {
@@ -98,6 +98,11 @@ img.darkableImage {
   background: white;
   cursor: inherit;
   display: block;
+}
+
+.form-group.required label:after {
+  content:"*";
+  color:red;
 }
 
 footer {
