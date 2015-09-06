@@ -20,3 +20,5 @@ $(document).on('ready', function() {
         removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> "
     });
 });
+
+$('#tab-logic').bootstrapTable('hideLoading');

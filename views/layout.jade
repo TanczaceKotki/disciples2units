@@ -3,16 +3,19 @@ html
   head
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.css')
+    link(rel="stylesheet", href="/js/bootstrap-table/src/bootstrap-table.css")
     link(rel='stylesheet', href='/css/style.css')
     link(rel='stylesheet', href='/css/fileinput.min.css')
-    //link(rel='stylesheet', href='/css/one-page-wonder.css')
     link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/css/bootstrap-editable.css')
 
   body(onload='parallax()')
     block content
-    // jQuery
     script(src='/bootstrap/js/jquery.js')
-    // Bootstrap Core JavaScript
     script(src='/bootstrap/js/bootstrap.min.js')
     script(src='/js/script.js')
     script(src='/js/fileinput.min.js')
+    script(src="/js/bootstrap-table/src/bootstrap-table.js")
+    script(src="/js/bootstrap-table/src/extensions/mobile/bootstrap-table-mobile.js")
+    script(src="/js/bootstrap-table/src/extensions/editable/bootstrap-table-editable.js")
+    script(src="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js")
