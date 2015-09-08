@@ -286,7 +286,7 @@
     <city_img>eded.jpg</city_img>
     <leaders>
       <warrior_lord>
-        <label>Death Kni</label>
+        <label>Death Knight</label>
         <flying>Yes</flying>
       </warrior_lord>
       <mage_lord>
@@ -317,7 +317,7 @@
         <target>1</target>
       </unit>
       <unit>
-        <label>Zom</label>
+        <label>Zombie</label>
         <level>2</level>
         <hp>170</hp>
         <armor>0</armor>
@@ -862,12 +862,12 @@
     <city_img>062c1f1cd36ca984766915d4d881fb36.jpg</city_img>
     <leaders>
       <warrior_lord>
-        <label>aaa</label>
+        <label/>
         <flying/>
       </warrior_lord>
       <mage_lord>
         <label/>
-        <flying>no</flying>
+        <flying/>
       </mage_lord>
       <guildmaster>
         <label/>

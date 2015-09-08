@@ -105,31 +105,6 @@ img.darkableImage {
   color:red;
 }
 
-.title {
-  display: inline;
-  float: left;
-  margin-right: 5px;
-  margin-bottom: 30px;
-}
-
-.hint {
-  display: block;
-  padding-top: 10px;
-  color: rgb(204, 204, 204);
-}
-
-.profession {
-  display: block;
-  width: 300px;
-  margin-top: 10px;
-  margin-bottom: -41px;
-  clear: both;
-}
-
-.fixed-table-toolbar .columns {
-  margin-bottom: 0;
-}
-
 footer {
   padding: 20px 0;
 }

@@ -19,18 +19,6 @@ $(document).on('ready', function() {
         removeLabel: "Delete",
         removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> "
     });
-    $('.tab_leader').find('td').editable({
-        type: 'text',
-        url: '/edit-leader',
-        defaultValue: '',
-        emptytext: ''
-    });
-    $('.tab_unit').find('td').editable({
-        type: 'text',
-        url: '/edit-unit',
-        defaultValue: '',
-        emptytext: ''
-    });
 });
 
-$.fn.editable.defaults.mode = 'inline';
+$('#tab-logic').bootstrapTable('hideLoading');

@@ -1,89 +1,84 @@
 extends layout
 
 mixin unit_rows(profession, unit_path)
-    h3.profession= profession
-    table(data-toggle="table" data-show-columns="true" data-mobile-responsive="true" data-check-on-init="true").tab_unit.table.table-striped
+    h3= profession
+    table(data-toggle="table" data-show-columns="true" data-mobile-responsive="true" data-check-on-init="true")#tab_logic.table.table-striped
         thead
             tr
-                each title in ['Name', 'Lv', 'HP', 'Armor', 'Immunities', 'Wards', 'Attack', '% to hit', 'Dmg', 'Source', 'Initiative', 'Reach', 'Target']
+                each title in ['Name', 'Level', 'HP', 'Armor', 'Immunities', 'Wards', 'Attack', 'Chance to hit', 'Damage', 'Source', 'Initiative', 'Reach', 'Target']
                     th(data-sortable="true")= title
         tbody
-            if unit_path
-                each unit in unit_path
-                    tr
-                        td(data-pk=unit.label data-name='label')= unit.label
-                        td(data-pk=unit.label data-name='level')= unit.level
-                        td(data-pk=unit.label data-name='hp')= unit.hp
-                        td(data-pk=unit.label data-name='armor')= unit.armor
-                        td(data-pk=unit.label data-name='immunities')= unit.immunities
-                        td(data-pk=unit.label data-name='ward')= unit.ward
-                        td(data-pk=unit.label data-name='attack')= unit.attack
-                        td(data-pk=unit.label data-name='chance_to_hit')= unit.chance_to_hit
-                        td(data-pk=unit.label data-name='damage')= unit.damage
-                        td(data-pk=unit.label data-name='source')= unit.source
-                        td(data-pk=unit.label data-name='initiative')= unit.initiative
-                        td(data-pk=unit.label data-name='reach')= unit.reach
-                        td(data-pk=unit.label data-name='target')= unit.target
+            each unit in unit_path
+                tr
+                    td= unit.label
+                    td= unit.level
+                    td= unit.hp
+                    td= unit.armor
+                    td= unit.immunities
+                    td= unit.ward
+                    td= unit.attack
+                    td= unit.chance_to_hit
+                    td= unit.damage
+                    td= unit.source
+                    td= unit.initiative
+                    td= unit.reach
+                    td= unit.target
 
 
 block content
     nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
-        .container
-            // Brand and toggle get grouped for better mobile display
-            .navbar-header
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-                    span.sr-only Toggle navigation
-                    span.icon-bar
-                    span.icon-bar
-                    span.icon-bar
-                a.navbar-brand(href='/') Home
-            // Collect the nav links, forms, and other content for toggling
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                ul.nav.navbar-nav
-                    each f in frac
-                        li
-                            a(href='/' + f.title + '')= f.title
+    .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='/') Home
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                each f in frac
                     li
-                        a(data-toggle="modal" data-target="#myModal")
-                            span.glyphicon.glyphicon-plus
-            // /.navbar-collapse
-        // /.container
+                        a(href='/' + f.title + '')= f.title
+                li
+                    a(data-toggle="modal" data-target="#myModal")
+                        span.glyphicon.glyphicon-plus
+        // /.navbar-collapse
+    // /.container
     div.container
         div.content
             h1 Disciples II units stats
             div.row
                 h2.text-center= stats.title
             div.row
-                h1.title Leaders
-                h3.hint Click cell to edit
-                table(data-toggle="table" data-show-columns="true" data-mobile-responsive="true" data-check-on-init="true").tab_leader.table.table-striped
+                h2 Leaders
+                table.table
                     thead
-                        each title in ['Class', 'Name', 'Flying?']
-                            th(data-sortable="true")= title
+                        tr
+                            th Class
+                            th Name
+                            th Flying?
                     tbody
                         tr
                             td Warrior Lord
-                            td(data-pk=stats.leaders.warrior_lord.label data-name='label')= stats.leaders.warrior_lord.label
-                            td(data-pk=stats.leaders.warrior_lord.label data-name='flying')= stats.leaders.warrior_lord.flying
+                            td= stats.leaders.warrior_lord.label
+                            td= stats.leaders.warrior_lord.flying
                         tr
                             td Mage Lord
-                            td(data-pk=stats.leaders.mage_lord.label data-name='label')= stats.leaders.mage_lord.label
-                            td(data-pk=stats.leaders.mage_lord.label data-name='flying')= stats.leaders.mage_lord.flying
+                            td= stats.leaders.mage_lord.label
+                            td= stats.leaders.mage_lord.flying
                         tr
                             td Guildmaster
-                            td(data-pk=stats.leaders.guildmaster.label data-name='label')= stats.leaders.guildmaster.label
-                            td(data-pk=stats.leaders.guildmaster.label data-name='flying')= stats.leaders.guildmaster.flying
+                            td= stats.leaders.guildmaster.label
+                            td= stats.leaders.guildmaster.flying
                         tr
                             td Champion
-                            td(data-pk=stats.leaders.champion.label data-name='label')= stats.leaders.champion.label
-                            td(data-pk=stats.leaders.champion.label data-name='flying')= stats.leaders.champion.flying
+                            td= stats.leaders.champion.label
+                            td= stats.leaders.champion.flying
             div.row
-                h1.title Units
-                h3.hint Click cell to edit
+                h2 Units
                 +unit_rows('Fighters', stats.fighters.unit)
                 +unit_rows('Mages', stats.mages.unit)
                 +unit_rows('Rangers', stats.rangers.unit)
-    footer
-        .row
-            .col-lg-12.text-center
-                p Copyright &copy; Katarzyna Bigaj 2015
