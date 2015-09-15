@@ -27,10 +27,25 @@ router.get('/:fracTitle', function(req, res) {
   }
 });
 
-router.post('/add', function(req, res) {
+router.post('/add-frac', function(req, res) {
   f.add(req, filename);
   res.redirect('/');
   filename = '';
+});
+
+router.post('/add-unit', function(req, res) {
+  f.addUnit(req);
+  res.end();
+});
+
+router.post('/edit-leader', function(req, res) {
+  f.editLeader(req);
+  res.end();
+});
+
+router.post('/edit-unit', function(req, res) {
+  f.editUnit(req);
+  res.end();
 });
 
 module.exports = router;

@@ -27,7 +27,7 @@ exports.write = function (obj) {
     fs.writeFileSync('./public/xml/xml.xml', xml);
 };
 
-exports.new_fraction = function (title, desc, img) {
+exports.blankFraction = function (title, desc, img) {
     return {
         'title': title,
         'description': desc,

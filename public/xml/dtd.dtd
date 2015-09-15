@@ -13,7 +13,9 @@
         <!ELEMENT fighters (unit*)>
         <!ELEMENT mages (unit*)>
         <!ELEMENT rangers (unit*)>
-            <!ELEMENT unit (label, level, hp, armor, immunities?, ward?, attack, chance_to_hit, damage, source, initiative, reach, target)>
+            <!ELEMENT unit (label?, level?, hp?, armor?, immunities?, ward?,
+                    attack?, chance_to_hit?, damage?, source?, initiative?,
+                    reach?, target?)>
             <!ELEMENT level (#PCDATA)>
             <!ELEMENT hp (#PCDATA)>
             <!ELEMENT armor (#PCDATA)>

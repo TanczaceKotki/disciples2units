@@ -30,6 +30,9 @@ body {
   font-size: 108px;
 }
 
+.page-header {
+  border-bottom: 0;
+}
 
 .outerLink {
   background-color: black;
@@ -103,6 +106,31 @@ img.darkableImage {
 .form-group.required label:after {
   content:"*";
   color:red;
+}
+
+.title {
+  display: inline;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 30px;
+}
+
+.hint {
+  display: block;
+  padding-top: 10px;
+  color: rgb(204, 204, 204);
+}
+
+.leaders .add-row {
+  display: none;
+}
+
+.profession {
+  display: block;
+  width: 300px;
+  margin-top: 14px;
+  margin-bottom: -41px;
+  clear: both;
 }
 
 footer {

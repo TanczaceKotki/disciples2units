@@ -19,6 +19,26 @@ $(document).on('ready', function() {
         removeLabel: "Delete",
         removeIcon: "<i class=\"glyphicon glyphicon-trash\"></i> "
     });
+    $('.pull-right').append('<div class="btn btn-primary add-row"><span class="glyphicon glyphicon-plus"></span></div>');
+    $('.edit').editable({
+        type: 'text',
+        url: '/edit-leader',
+        defaultValue: '',
+        emptytext: ''
+    });
+    $('.tab_unit').find('td').editable({
+        type: 'text',
+        url: '/edit-unit',
+        defaultValue: '',
+        emptytext: ''
+    });
+    $('.add-row').click(function(e){
+        $.post("/add-unit", {
+                profession: $(this).closest('.bootstrap-table').prev().text().toLowerCase(),
+                fraction: $('.frac_name').html()
+            }
+        );
+    });
 });
 
-$('#tab-logic').bootstrapTable('hideLoading');
+$.fn.editable.defaults.mode = 'inline';
